@@ -1,0 +1,14 @@
+# RUN_AS_USER {{ nut_run_as_user }}
+
+MONITOR {{ nut_monitor.system }} {{ nut_monitor.powervalue }} {{ nut_monitor.username }} {{ nut_monitor.password }} {{ nut_monitor.type }}
+MINSUPPLIES {{ nut_minsupplies }}
+SHUTDOWNCMD {{ nut_shutdowncmd }}
+NOTIFYCMD {{ nut_notifycmd }}
+POLLFREQ {{ nut_pollfreq }}
+POLLFREQALERT {{ nut_pollfreqalert }}
+HOSTSYNC {{ nut_hostsync }}
+DEADTIME {{ nut_deadtime }}
+POWERDOWNFLAG {{ nut_powerdownflag }}
+RBWARNTIME {{ nut_rbwarntime }}
+NOCOMMWARNTIME {{ nut_nocommwarntime }}
+FINALDELAY {{ nut_finaldelay }}

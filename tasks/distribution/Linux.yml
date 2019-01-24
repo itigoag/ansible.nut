@@ -1,2 +1,25 @@
 ---
 # tasks file for sbaerlocher.nut
+
+- name: "linux : install nut"
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ nut_packages }}"
+  notify:
+    - enabled nut
+
+- name: "linux : create configuration"
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/nut/{{ item }}"
+    owner: root
+    group: nut
+    mode: 0640
+  with_items:
+    - nut.conf
+    - upsmon.conf
+    - upssched.conf
+  notify:
+    - restart nut

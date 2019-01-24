@@ -1,2 +1,17 @@
 ---
 # handlers file for sbaerlocher.nut
+
+- name: restart nut
+  service:
+    name: "nut-monitor"
+    state: restarted
+
+- name: start nut
+  service:
+    name: "nut-monitor"
+    state: started
+
+- name: enabled nut
+  service:
+    name: "nut-monitor"
+    enabled: true
