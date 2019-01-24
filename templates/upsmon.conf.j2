@@ -3,7 +3,9 @@
 MONITOR {{ nut_monitor.system }} {{ nut_monitor.powervalue }} {{ nut_monitor.username }} {{ nut_monitor.password }} {{ nut_monitor.type }}
 MINSUPPLIES {{ nut_minsupplies }}
 SHUTDOWNCMD {{ nut_shutdowncmd }}
+{% if nut_notifycmd is defined %}
 NOTIFYCMD {{ nut_notifycmd }}
+{% endif %}
 POLLFREQ {{ nut_pollfreq }}
 POLLFREQALERT {{ nut_pollfreqalert }}
 HOSTSYNC {{ nut_hostsync }}
